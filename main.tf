@@ -10,7 +10,7 @@ terraform {
     backend "remote" {
         organization = "myshka"
         workspaces {
-            name = "myshka-tf-tower"
+            name = "automation_platform"
         }
     }
 }
