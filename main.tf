@@ -86,7 +86,7 @@ resource "azurerm_linux_virtual_machine" "automation_platform_server" {
     element(azurerm_network_interface.automation_platform_nic.*.id, count.index),
   ]
   resource_group_name = azurerm_resource_group.automation_platform.name
-  size                = "Standard_F4s_v2"
+  size                = "Standard_D2s_v3"
 
   admin_ssh_key {
     username   = var.admin_username
