@@ -1,5 +1,5 @@
 variable "vm_prefix" {
-  default = "automation_platform"
+  default = "automation-platform"
 }
 
 variable "server_count" {
