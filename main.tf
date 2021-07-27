@@ -60,7 +60,7 @@ resource "azurerm_public_ip" "automation_platform_pub" {
 
 resource "azurerm_network_interface" "automation_platform_nic" {
   count                         = var.server_count
-  enable_accelerated_networking = true
+  enable_accelerated_networking = false
   location                      = azurerm_resource_group.automation_platform.location
   name                          = "${var.vm_prefix}${format("%02d", count.index)}-nic"
   resource_group_name           = azurerm_resource_group.automation_platform.name
