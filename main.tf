@@ -111,6 +111,6 @@ resource "azurerm_linux_virtual_machine" "automation_platform_server" {
 output "vm_ip_addresses" {
   value = {
     for vm in azurerm_linux_virtual_machine.automation_platform_server:
-    vm.name => vm.ipv4_address
+    vm.name => vm.public_ip_address
   }
 }
