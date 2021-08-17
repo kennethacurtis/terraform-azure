@@ -107,3 +107,10 @@ resource "azurerm_linux_virtual_machine" "automation_platform_server" {
 
   timeouts {}
 }
+
+output "vm_ip_addresses" {
+  value = {
+    for vm in azurerm_linux_virtual_machine.automation_platform_server:
+    vm.name => vm.ipv4_address
+  }
+}
