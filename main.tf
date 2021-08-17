@@ -90,7 +90,7 @@ resource "azurerm_linux_virtual_machine" "automation_platform_server" {
 
   admin_ssh_key {
     username   = var.admin_username
-    public_key = file("files/id_rsa.pub")
+    public_key = file("files/wsl_home_id_rsa.pub")
   }
 
   os_disk {
