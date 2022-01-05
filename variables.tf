@@ -3,7 +3,7 @@ variable "vm_prefix" {
 }
 
 variable "server_count" {
-  default = "1"
+  default = "3"
 }
 
 variable "admin_username" {
